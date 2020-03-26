@@ -69,7 +69,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/app/**/*.{ts,tsx}",
+      "src/components/**/*.{ts,tsx}",
+      "!src/components/App.tsx",
       "!<rootDir>/node_modules/"
     ],
     "coverageThreshold": {
