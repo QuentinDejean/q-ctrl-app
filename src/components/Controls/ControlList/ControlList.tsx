@@ -7,9 +7,8 @@ import {
   TableRow,
 } from '@material-ui/core'
 
-import Control from './Control/Control'
-
-import type { Control as ControlType } from './Control/types'
+import Control from 'components/Controls/ControlItem/ControlItem'
+import type { Control as ControlType } from 'components/Controls/ControlItem/types'
 
 type Props = {
   controls: ControlType[]

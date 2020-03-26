@@ -1,4 +1,4 @@
-import type { Control } from './Control/types'
+import type { Control } from './ControlItem/types'
 
 const controls = {
   links: {

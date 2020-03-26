@@ -7,7 +7,7 @@ type Props = {
   attributes: ControlAttributes
 }
 
-const Control = ({
+const ControlItem = ({
   attributes: {
     name,
     type,
@@ -25,4 +25,4 @@ const Control = ({
   </TableRow>
 )
 
-export default Control
+export default ControlItem
