@@ -1,29 +1,25 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
+import styled from 'styled-components'
+import { Container } from '@material-ui/core'
 
-import logo from './logo.svg'
-import './App.css'
+const Header = styled.header`
+  padding: 10px 0 10px 20px;
+`
+
+const AppContainer = styled.section`
+  background-color: #f9f7fc;
+  min-height: 95vh;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+    <div>
+      <Header>
+        <img src="/logo.svg" alt="Q-CTL logo" />
+      </Header>
+      <AppContainer>
+        <Container maxWidth="sm">App stuff</Container>
+      </AppContainer>
     </div>
   )
 }
