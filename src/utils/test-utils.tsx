@@ -5,10 +5,10 @@ type Props = {
   children: React.ReactNode
 }
 
-const AllTheProviders = ({ children }: Props) => <>{children}</>
+const Provider = ({ children }: Props) => <>{children}</>
 
 const customRender = (ui: React.ReactElement, options?: any) =>
-  render(ui, { wrapper: AllTheProviders, ...options })
+  render(ui, { wrapper: Provider, ...options })
 
 // re-export everything
 export * from '@testing-library/react'
