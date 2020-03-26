@@ -1,24 +1,41 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { CircularProgress, Button } from '@material-ui/core'
+import React, { useState, useEffect } from 'react'
 
 import { title } from './constants'
+import ControlList from './ControlList/ControlList'
+import controlData from './data'
 
-const ButtonContainer = styled(Button)`
-  &&& {
-    margin-left: 20px;
-    border-radius: 22px;
-    min-width: 42px;
-    padding: 8px 15px;
-  }
-`
+import type { Control as ControlType } from './ControlItem/types'
+import { ButtonContainer, SpinnerContainer } from './styles'
 
-const SpinnerContainer = styled(CircularProgress)`
-  margin-top: 30px;
-`
+type ControlState = {
+  isLoading: boolean
+  data?: ControlType[]
+  hasError: boolean
+}
 
 const Controls = () => {
-  const [isLoading] = useState(true)
+  const [controlList, setControlList] = useState<ControlState>({
+    isLoading: true,
+    data: undefined,
+    hasError: false,
+  })
+
+  useEffect(() => {
+    const controlListLoading = setTimeout(() => {
+      setControlList({
+        isLoading: false,
+        data: controlData.data,
+        hasError: false,
+      })
+    }, 500)
+
+    return () => {
+      clearTimeout(controlListLoading)
+    }
+  }, [])
+
+  const { isLoading, data } = controlList
+
   return (
     <>
       <div>
@@ -28,6 +45,7 @@ const Controls = () => {
         </ButtonContainer>
       </div>
       {isLoading && <SpinnerContainer />}
+      {!isLoading && data && <ControlList controls={data} />}
     </>
   )
 }
