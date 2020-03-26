@@ -11,6 +11,10 @@ const ButtonContainer = styled(Button)`
   }
 `
 
+const SpinnerContainer = styled(CircularProgress)`
+  margin-top: 30px;
+`
+
 const Controls = () => {
   const [isLoading] = useState(true)
   return (
@@ -21,7 +25,7 @@ const Controls = () => {
           +
         </ButtonContainer>
       </div>
-      {isLoading && <CircularProgress />}
+      {isLoading && <SpinnerContainer />}
     </>
   )
 }
