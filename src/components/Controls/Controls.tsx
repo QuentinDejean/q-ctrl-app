@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { CircularProgress, Button } from '@material-ui/core'
 
+import { title } from './constants'
+
 const ButtonContainer = styled(Button)`
   &&& {
     margin-left: 20px;
@@ -20,7 +22,7 @@ const Controls = () => {
   return (
     <>
       <div>
-        <strong>Controls </strong>
+        <strong>{title}</strong>
         <ButtonContainer variant="contained" color="primary" size="large">
           +
         </ButtonContainer>
