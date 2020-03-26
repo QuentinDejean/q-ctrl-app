@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Requirements
+
+Install [NVM](https://github.com/creationix/nvm) and run `nvm use` in the repo, or ensure that your version of Node is at least equivalent to the one in `.nvmrc`
+
 ## Available Scripts
 
 In the project directory, you can run:
