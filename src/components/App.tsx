@@ -5,22 +5,23 @@ import Controls from './Controls/Controls'
 import theme from 'utils/theme'
 
 const Header = styled.header`
+  background-color: white;
   padding: 10px 0 10px 20px;
+  margin-bottom: 50px;
 `
 
 const LayoutContainer = styled.section`
   background-color: #f9f7fc;
-  min-height: 95vh;
-  padding-top: 50px;
+  min-height: 100vh;
 `
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Header>
-        <img src="/logo.svg" alt="Q-CTL logo" />
-      </Header>
       <LayoutContainer>
+        <Header>
+          <img src="/logo.svg" alt="Q-CTL logo" />
+        </Header>
         <Container maxWidth="md">
           <Controls />
         </Container>
