@@ -21,7 +21,7 @@ function App() {
         <img src="/logo.svg" alt="Q-CTL logo" />
       </Header>
       <LayoutContainer>
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
           <Controls />
         </Container>
       </LayoutContainer>
